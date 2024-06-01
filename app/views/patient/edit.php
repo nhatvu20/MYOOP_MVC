@@ -18,13 +18,11 @@
                 <label for="name">Name</label>
                 <!--$patient truyền từ hàm getPatient ở HomeController-->
                 <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value = "<?php echo $patient->getFullName()?>">
-                <small id="nameHelp" class="form-text text-muted">Nhập đúng email hộ tôi để đỡ phải regex.</small>
             </div>
             <div class="form-group">
                 <label for="gender">gender</label>
                 <!--$patient truyền từ hàm getPatient ở HomeController-->
                 <input type="text" class="form-control" name="gender" id="gender" placeholder="gender" value = "<?php echo $patient->getGender()?>">
-                <small id="genderHelp" class="form-text text-muted">Nhập 0 hoặc 1</small>
             </div>
             <!-- Kiểu link js -->
             <!-- <input type="submit" name="btn-submit" class="btn btn-primary" onclick="updatePatient()"> -->

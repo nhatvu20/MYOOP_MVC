@@ -15,12 +15,10 @@
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
-                <small id="nameHelp" class="form-text text-muted">Nhập đúng email hộ tôi để đỡ phải regex.</small>
             </div>
             <div class="form-group">
                 <label for="gender">gender</label>
                 <input type="text" class="form-control" name="gender" id="gender" placeholder="gender">
-                <small id="genderHelp" class="form-text text-muted">Nhập 0 hoặc 1</small>
             </div>
 
             <!-- Kiểu link js -->

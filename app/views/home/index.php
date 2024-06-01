@@ -16,7 +16,7 @@
 
 <body>
     <div class="container">
-        <h3 class="text-center text-uppercase text-success mt-3 mb-3">Quản lý bệnh nhân</h3>
+        <h3 class="text-center text-uppercase text-success mt-3 mb-3">Quản lý</h3>
         <!-- onclick thì file index.php trong public sẽ nhận được $controller = viewAdd-->
         <!-- href đến file index trong public DOMAIN la duoc khai bao trong config la http://localhost/MYOOP_MVC/-->
         <a class="btn btn-primary" href="<?= DOMAIN . 'public/index.php?controller=viewAdd'?>">
