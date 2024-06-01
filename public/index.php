@@ -24,6 +24,8 @@ if ($controller == 'home'){
     $homeController->viewUpdate();
 } else if ($controller == 'viewDelete'){    //đây chính là $controller truyền từ file index trong home
     require_once APP_ROOT.'/app/controllers/HomeController.php';
+    $homeController = new HomeController();
+    $homeController->viewDelete();
     header("Location: index.php?controller=deletePatients&id=".$_GET["id"]."");    //!!! Đi thi comment dòng này lại
 }else if($controller == "addPatients"){ //được gọi đến đây bằng header trong add.php
     echo "vào rồi";
