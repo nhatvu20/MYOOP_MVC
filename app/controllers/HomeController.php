@@ -11,7 +11,7 @@ class HomeController{
 
 
     public function delete(){
-        include APP_ROOT.'/app/views/home/delete.php'; //nhúng (import) file view vào thì sẽ có thể nhận được data từ form theo method = post|get   
+        include APP_ROOT.'/app/views/patient/delete.php'; //nhúng (import) file view vào thì sẽ có thể nhận được data từ form theo method = post|get   
         // Comments đống này lại
         $id = $_GET["id"];  //lấy param trên URL
         $patientService = new PatientService();
@@ -20,7 +20,7 @@ class HomeController{
     }
 
     public function viewDelete() {
-        include APP_ROOT.'/app/views/home/delete.php'; //nhúng (import) file view vào thì sẽ có thể nhận được data từ form theo method = post|get   
+        include APP_ROOT.'/app/views/patient/delete.php'; //nhúng (import) file view vào thì sẽ có thể nhận được data từ form theo method = post|get   
     }
 
     public function viewAdd(){

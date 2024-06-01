@@ -43,6 +43,7 @@
                             <!-- Gọi đến route để render view -->
                             <!-- onclick thì file index.php trong public sẽ nhận được $controller = viewUpdate-->
                             <!-- href đến file index trong public DOMAIN la duoc khai bao trong config la http://localhost/MYOOP_MVC/-->
+                            <!-- Chú ý đi thi sửa cả getId -->
                             <a class="btn btn-warning" href="<?= DOMAIN.'public/index.php?id=' . $patient->getId() ?>&controller=viewUpdate">
                                 <i class="bi bi-pencil-square"></i>Sửa</a>
 
@@ -50,6 +51,7 @@
                         <td>
                             <!-- onclick thì file index.php trong public sẽ nhận được $controller = deletePatients-->
                             <!-- href đến file index trong public DOMAIN la duoc khai bao trong config la http://localhost/MYOOP_MVC/-->
+                            <!-- Chú ý đi thi sửa cả getId -->
                             <a class="btn btn-danger" href="<?= DOMAIN . 'public/index.php?id=' . $patient->getId() ?>&controller=viewDelete">
                                 <i class="bi bi-trash3"></i>Xóa</a>
                         </td>
