@@ -9,6 +9,7 @@ class HomeController{
     }
 
     public function delete(){
+        include APP_ROOT.'/app/views/home/delete.php'; //nhúng (import) file view vào thì sẽ có thể nhận được data từ form theo method = post|get   
         $id = $_GET["id"];  //lấy param trên URL
         $patientService = new PatientService();
         $patients = $patientService->deletePatients($id);
