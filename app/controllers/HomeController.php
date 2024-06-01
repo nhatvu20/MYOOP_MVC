@@ -1,5 +1,5 @@
 <?php
-require_once APP_ROOT.'/app/services/PatientService.php';
+require_once APP_ROOT.'/app/services/PatientService.php';   //Nếu tạo service mới phải import vào
 
 class HomeController{
     public function index(){

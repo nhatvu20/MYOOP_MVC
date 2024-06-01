@@ -1,6 +1,6 @@
 <?php
 
-require_once APP_ROOT.'/app/models/Patient.php';
+require_once APP_ROOT.'/app/models/Patient.php';// Khi tạo model mới nhớ phải có dòng này
 
 class PatientService{
     //Đi thi sử dụng cái này
