@@ -1,7 +1,7 @@
 <?php
 
 class Patient{
-
+    // Đi thi phải tạo model mới đủ hàm get với từng trường, chú ý sửa hàm tạo
     private $id;
     private $fullName;
     private $gender;

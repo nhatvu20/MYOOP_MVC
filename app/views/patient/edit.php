@@ -30,6 +30,14 @@
             <!-- <input type="submit" name="btn-submit" class="btn btn-primary" onclick="updatePatient()"> -->
             
             <input type="submit" name="btn_submit" class="btn btn-primary">
+            <?php 
+                // Nếu dùng js thì comment 3 dòng này lại   //Đi thi comment cái này
+                if(isset($_POST['btn_submit'])){    //Kiểm tra xem đã bấm nút btn_submit chưa
+                    // index.php? sau dấu ? là params có thể sử dụng $_GET["controller"] để lấy xuống
+                    // Gọi đến file index.php trong thư mục public 
+                    header("Location: ".DOMAIN."public/index.php?controller=updatePatients&id=".$_POST['id']."&name=".$_POST['name']."&gender=".$_POST['gender']);
+                }
+            ?>
         </form>
     </div>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->

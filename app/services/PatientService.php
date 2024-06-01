@@ -3,6 +3,27 @@
 require_once APP_ROOT.'/app/models/Patient.php';
 
 class PatientService{
+    //Đi thi sử dụng cái này
+    public function getData(){
+        $patients = [];
+        $dbConnection = new DBConnection();
+
+        if ($dbConnection != null){
+            $conn = $dbConnection->getConnection();
+
+            if ($conn != null){
+                $sql = "SELECT * FROM patients";    //sửa tên bảng dòng này
+                $stmt = $conn->query($sql);
+
+                while ($row = $stmt->fetch()){
+                    $patient = new Patient($row['id'], $row['name'], $row['gender']);   //sửa dòng này theo các trường và đối tượng
+                    $patients[] = $patient;
+                }
+
+                return $patients;
+            }
+        }
+    }
 
     public function getAllPatients(){
         $patients = [];

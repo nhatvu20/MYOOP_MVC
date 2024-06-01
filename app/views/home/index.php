@@ -50,7 +50,7 @@
                         <td>
                             <!-- onclick thì file index.php trong public sẽ nhận được $controller = deletePatients-->
                             <!-- href đến file index trong public DOMAIN la duoc khai bao trong config la http://localhost/MYOOP_MVC/-->
-                            <a class="btn btn-danger" href="<?= DOMAIN . 'public/index.php?id=' . $patient->getId() ?>&controller=deletePatients">
+                            <a class="btn btn-danger" href="<?= DOMAIN . 'public/index.php?id=' . $patient->getId() ?>&controller=viewDelete">
                                 <i class="bi bi-trash3"></i>Xóa</a>
                         </td>
                     </tr>
