@@ -53,7 +53,7 @@ class PatientService{
             $conn = $dbConnection->getConnection();
 
             if ($conn != null){
-                $sql = "INSERT INTO `testdb`.`patients` (`name`, `gender`) VALUES ('$name', $gender);";
+                $sql = "INSERT INTO `testdb`.`patients` (`name`, `gender`) VALUES ('$name', '$gender');";
                 $stmt = $conn->query($sql);
                 if($stmt) {
                     echo "sắc sét";
@@ -97,7 +97,7 @@ class PatientService{
             $conn = $dbConnection->getConnection();
             // $id = $_GET['id'];
             if ($conn != null){
-                $sql = "UPDATE `testdb`.`patients` SET `name`='$name', `gender`= $gender WHERE  `id`= $id;";
+                $sql = "UPDATE `testdb`.`patients` SET `name`='$name', `gender`= '$gender' WHERE  `id`= $id;";
                 $stmt = $conn->query($sql);
                 if($stmt) {
                     echo "sắc sét";
