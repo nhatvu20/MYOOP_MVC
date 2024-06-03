@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thêm bệnh nhân</title>
+    <title>Thêm</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href=".././public/bootstrap/css/bootstrap.min.css">
@@ -14,11 +14,11 @@
         <form method="post">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
+                <input required type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
             </div>
             <div class="form-group">
                 <label for="gender">gender</label>
-                <input type="text" class="form-control" name="gender" id="gender" placeholder="gender">
+                <input required type="text" class="form-control" name="gender" id="gender" placeholder="gender">
             </div>
 
             <!-- Kiểu link js -->
@@ -31,7 +31,7 @@
                     //Hàm header là để chuyển trang gần giống như thẻ <a></a> của HTML
                     // index.php? sau dấu ? là params có thể sử dụng $_GET["controller"] để lấy xuống
                     // Gọi đến file index.php trong thư mục public. với controller là addPatients
-                    header("Location: ".DOMAIN."public/index.php?controller=addPatients&name=".$_POST['name']."&gender=".$_POST['gender']);
+                    header("Location: ".DOMAIN."public/index.php?action=addPatients&name=".$_POST['name']."&gender=".$_POST['gender']);
                 }
             ?>
         </form>

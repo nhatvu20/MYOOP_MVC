@@ -17,9 +17,9 @@
 <body>
     <div class="container">
         <h3 class="text-center text-uppercase text-success mt-3 mb-3">Quản lý</h3>
-        <!-- onclick thì file index.php trong public sẽ nhận được $controller = viewAdd-->
+        <!-- onclick thì file index.php trong public sẽ nhận được $action = viewAdd-->
         <!-- href đến file index trong public DOMAIN la duoc khai bao trong config la http://localhost/MYOOP_MVC/-->
-        <a class="btn btn-primary" href="<?= DOMAIN . 'public/index.php?controller=viewAdd'?>">
+        <a class="btn btn-primary" href="<?= DOMAIN . 'public/index.php?action=viewAdd'?>">
             <i class="bi bi-pencil-square"></i>Thêm mới</a>
         <table class="table">
             <thead>
@@ -41,18 +41,18 @@
                         <td><?= $patient->getGender(); ?></td>
                         <td>
                             <!-- Gọi đến route để render view -->
-                            <!-- onclick thì file index.php trong public sẽ nhận được $controller = viewUpdate-->
+                            <!-- onclick thì file index.php trong public sẽ nhận được $action = viewUpdate-->
                             <!-- href đến file index trong public DOMAIN la duoc khai bao trong config la http://localhost/MYOOP_MVC/-->
                             <!-- Chú ý đi thi sửa cả getId -->
-                            <a class="btn btn-warning" href="<?= DOMAIN.'public/index.php?id=' . $patient->getId() ?>&controller=viewUpdate">
+                            <a class="btn btn-warning" href="<?= DOMAIN.'public/index.php?id=' . $patient->getId() ?>&action=viewUpdate">
                                 <i class="bi bi-pencil-square"></i>Sửa</a>
 
                         </td>
                         <td>
-                            <!-- onclick thì file index.php trong public sẽ nhận được $controller = deletePatients-->
+                            <!-- onclick thì file index.php trong public sẽ nhận được $action = deletePatients-->
                             <!-- href đến file index trong public DOMAIN la duoc khai bao trong config la http://localhost/MYOOP_MVC/-->
                             <!-- Chú ý đi thi sửa cả getId -->
-                            <a class="btn btn-danger" href="<?= DOMAIN . 'public/index.php?id=' . $patient->getId() ?>&controller=viewDelete">
+                            <a class="btn btn-danger" href="<?= DOMAIN . 'public/index.php?id=' . $patient->getId() ?>&action=viewDelete">
                                 <i class="bi bi-trash3"></i>Xóa</a>
                         </td>
                     </tr>
