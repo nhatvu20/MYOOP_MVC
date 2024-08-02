@@ -6,5 +6,5 @@ define('DOMAIN', 'http://localhost/MYOOP_MVC/');
 
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_PASS', '123456');    //Sửa mật khẩu theo xampp hoặc laragon của bạn
 define('DB_NAME', 'testdb');    //Sửa dòng này theo tên database

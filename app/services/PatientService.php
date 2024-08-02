@@ -28,7 +28,6 @@ class PatientService{
     public function getAllPatients(){
         $patients = [];
         $dbConnection = new DBConnection();
-
         if ($dbConnection != null){
             $conn = $dbConnection->getConnection();
 
@@ -40,7 +39,6 @@ class PatientService{
                     $patient = new Patient($row['id'], $row['name'], $row['gender']);
                     $patients[] = $patient;
                 }
-
                 return $patients;
             }
         }
@@ -128,7 +126,7 @@ class PatientService{
         //     }
         // }
         // $id = $_GET['id'];
-        $conn = mysqli_connect('localhost','root','','testdb');
+        $conn = mysqli_connect('localhost','root','123456','testdb');//Sửa mật khẩu theo xampp hoặc laragon của bạn
         $sql = "SELECT * FROM `testdb`.`patients` WHERE  `id`= $id;";
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result);
