@@ -13,6 +13,7 @@
         <h1 class="text-center">Xóa</h1>
         <form method="post">
             <!--$patient truyền từ hàm getPatient ở HomeController-->
+            <!--getId, getFullName là các phương thức của đối tượng Patient ở trong models-->
             <input type="hidden" class="form-control" id="id" name="id" placeholder="Enter Name" value = "<?= $patient->getId()?>">
             <div class="form-group">
                 <label for="name">Name</label>

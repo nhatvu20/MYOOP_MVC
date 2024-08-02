@@ -2,7 +2,6 @@ function _apiGet(url, data){
     if(!data){
         data = {};
     }
-    // alert("vào");    
     $.ajax({
         url: url,
         type: 'GET',
@@ -20,7 +19,8 @@ function addPatient(){
     var gender = document.getElementById('gender').value;
     alert(name + " " + gender);
     data = {
-        controller: "addPatients",
+        action: "addPatients",
+        controller: "patient",
         name: name,
         gender: gender,
     }
@@ -33,7 +33,8 @@ function updatePatient(){
     var gender = document.getElementById('gender').value;
     alert(id + " " + name + " " + gender);
     data = {
-        controller: "updatePatients",
+        action: "updatePatients",
+        controller: "patient",
         id: id,
         name: name,
         gender: gender,

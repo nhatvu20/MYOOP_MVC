@@ -24,16 +24,15 @@
                 <!--$patient truyền từ hàm getPatient ở HomeController-->
                 <input required type="text" class="form-control" name="gender" id="gender" placeholder="gender" value = "<?php echo $patient->getGender()?>">
             </div>
-            <!-- Kiểu link js -->
+            <!-- Kiểu link js (chưa sửa lại đang lỗi) nếu dùng thì comment 5 dòng ở chỗ cái if(isset($_POST['btn_submit'])) ở dưới lại-->
             <!-- <input type="submit" name="btn-submit" class="btn btn-primary" onclick="updatePatient()"> -->
             
             <input type="submit" name="btn_submit" class="btn btn-primary">
             <?php 
-                // Nếu dùng js thì comment 3 dòng này lại   //Đi thi comment cái này
                 if(isset($_POST['btn_submit'])){    //Kiểm tra xem đã bấm nút btn_submit chưa
-                    // index.php? sau dấu ? là params có thể sử dụng $_GET["controller"] để lấy xuống
+                    // index.php? sau dấu ? là params có thể sử dụng $_GET["action"] để lấy xuống
                     // Gọi đến file index.php trong thư mục public 
-                    header("Location: ".DOMAIN."public/index.php?action=updatePatients&id=".$_POST['id']."&name=".$_POST['name']."&gender=".$_POST['gender']);
+                    header("Location: ".DOMAIN."public/index.php?action=updatePatients&controller=patient&id=".$_POST['id']."&name=".$_POST['name']."&gender=".$_POST['gender']);
                 }
             ?>
         </form>

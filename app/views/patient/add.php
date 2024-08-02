@@ -21,17 +21,17 @@
                 <input required type="text" class="form-control" name="gender" id="gender" placeholder="gender">
             </div>
 
-            <!-- Kiểu link js -->
+            <!-- Kiểu link js (chưa sửa lại đang lỗi) nếu dùng thì comment 5 dòng ở chỗ cái if(isset($_POST['btn_submit'])) ở dưới lại-->
             <!-- <input type="submit" name="btn-submit" class="btn btn-primary" onclick="addPatient()"> -->
 
             <input type="submit" name="btn_submit" class="btn btn-primary">
             <?php 
-                // Nếu dùng js thì comment 3 dòng này lại   //Đi thi comment cái này
+                // Nếu dùng js thì comment 3 dòng này lại
                 if(isset($_POST['btn_submit'])){    //Kiểm tra xem đã bấm nút btn_submit chưa
                     //Hàm header là để chuyển trang gần giống như thẻ <a></a> của HTML
-                    // index.php? sau dấu ? là params có thể sử dụng $_GET["controller"] để lấy xuống
-                    // Gọi đến file index.php trong thư mục public. với controller là addPatients
-                    header("Location: ".DOMAIN."public/index.php?action=addPatients&name=".$_POST['name']."&gender=".$_POST['gender']);
+                    // index.php? sau dấu ? là params có thể sử dụng $_GET["action"] để lấy xuống
+                    // Gọi đến file index.php trong thư mục public. với action là addPatients
+                    header("Location: ".DOMAIN."public/index.php?action=addPatients&controller=patient&name=".$_POST['name']."&gender=".$_POST['gender']);//Truyền nhiều đối số nối nhau bằng &
                 }
             ?>
         </form>
